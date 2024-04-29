@@ -1,0 +1,28 @@
+import pytest
+import re
+
+
+def test_add():
+    x = 2
+    y = 4
+
+    z = x+y
+    print("The sum is: {} ".format(z))
+    assert z ==6
+
+def test_mul():
+    x = 20
+    y = 30
+    z = x*y
+    print("The product is {}".format(z))
+    assert z ==600
+
+def test_char():
+    text = " My name is Nandakumar. I work in Thinkpalm technologies since 1st otcober 2019 till now."
+    x = re.match("Nandakumar*", text)
+    if x:
+        print("Found")
+        print("The match is found {}".format(x.group()))
+    else:
+        print("Not found")
+
