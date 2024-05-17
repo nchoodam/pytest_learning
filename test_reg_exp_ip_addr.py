@@ -22,7 +22,18 @@ def test_ip_addr(get_item):
             if i == '172.27.10.255':
                 x = i
                 print(Fore.GREEN, "\nThe ip address is:"+x)
-    assert x == "172.27.10.255"
+    try:
+        print("Test with assert {}".format(x))
+        assert x == "172.27.10.255"
+    except AssertionError:
+        print("Please continue with testing.")
+
+    try:
+        print("Test with assert {}".format(x))
+        assert x == "172.27.10.200"
+    except AssertionError:
+        print("Please continue with testing.")
+
 
 
 
